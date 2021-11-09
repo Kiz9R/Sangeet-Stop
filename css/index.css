@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap");
+/* variables */
+:root {
+  --googlefont1: "Lato", sans-serif;
+  --googlefont2: "Poppins", sans-serif;
+  --googlefont3: "Ephesis", cursive;
+  --googlefont4: "ZCOOL KuaiLe", cursive;
+  --googlefont5: "Lobster", cursive;
+  --green: #0bda51;
+  --white1: #fdfff5;
+  --white2: #ffffe4;
+  --dark: #222;
+  --grey1: #a09f9f;
+  --grey2: #dee1e9;
+  --candy: #ff0800;
+  --tea: #d0f0c0;
+  --cherry: #fcc9b9;
+  --transition1: all 1s linear;
+  --transition2: all 0.3s ease-in-out;
+  --letterspace: 0.25rem;
+  --lightshadow: 2px 5px 3px 0 rgba(0, 0, 0, 0.25);
+  --darkshadow: 4px 10px 6px 0 rgba(0, 0, 0, 0.6);
+}
+/* end of variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--googlefont5);
+}
+.logo-container {
+  padding: 0 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  background: var(--white2);
+}
+.logo-container img {
+  width: 100px;
+}
+.side-btn {
+  align-self: center;
+  border: 2px solid brown;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 4px;
+  margin: 4px 3px;
+  /* background: var(--grey2); */
+  background: brown;
+  transition: all 1s ease;
+}
+.side-btn:hover {
+  cursor: pointer;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  transform: rotate(45deg) translate(-7px, -4.5px);
+}
+.side-nav-links {
+  list-style-type: none;
+  background: #222;
+}
+.side-nav-links li:first-of-type {
+  padding: 10px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: var(--cherry);
+  font-family: var(--googlefont2);
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* text-decoration: underline; */
+}
+.side-nav-links a {
+  display: block;
+  padding: 5px 10px;
+  font-family: var(--googlefont5);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  text-decoration: none;
+  /* color: var(--tea); */
+  color: orange;
+  transition: all 0.5s ease;
+}
+
+.side-nav-links a:hover {
+  background: var(--white2);
+  color: #222;
+  padding-left: 30px;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  /*font-family: var(--googlefont5); */
+  /* transform: translateX(20px); */
+}
+.side-nav-links span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.side-nav-links {
+  display: none;
+}
+/* main */
+
+.nav-top {
+  height: 104px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 5px solid var(--white2);
+}
+.nav-btn {
+  border: 3px solid brown;
+  /* align-self: center; */
+  cursor: pointer;
+  display: none;
+}
+
+.chevron-icons a {
+  font-size: 30px;
+  margin: 10px;
+}
+.nav-img {
+  display: flex;
+}
+.nav-top img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  align-self: center;
+}
+.nav-img h3 {
+  align-self: center;
+  color: #272727;
+  text-transform: capitalize;
+  font-size: 25px;
+}
+.nav-top a {
+  color: var(--candy);
+}
+.nav-top input {
+  font-size: 16px;
+  border: 2px solid black;
+  padding: 5px;
+}
+.nav-top input::placeholder {
+  color: var(--dark);
+  font-family: var(--googlefont2);
+  font-weight: bold;
+}
+.sign-out {
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+/* change */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+@media screen and (min-width: 806px) {
+  .side-nav-links {
+    display: block !important;
+  }
+  .side-btn {
+    display: none;
+  }
+  /* .nav-btn {
+    display: block;
+  } */
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .side-nav {
+    flex: 0 0 20%;
+    min-height: 100vh;
+    background: var(--dark);
+  }
+  li {
+    padding-bottom: 20px;
+  }
+  .nav-btn {
+    display: block;
+  }
+  main {
+    flex: 0 0 80%;
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw !important;
+  }
+  .logo-container {
+    justify-content: center;
+  }
+  .margin {
+    margin-left: -20%;
+  }
+}
+.side-nav {
+  transition: var(--transition1);
+}
+.max-width {
+  max-width: 100vw !important;
+  padding: 0 20px;
+}
+/* end of change */
+/* song list */
+.song-list {
+  padding: 20px;
+  background: var(--tea);
+}
+.list-item {
+  margin: 20px 0;
+  display: flex;
+}
+.list-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+.list-item-icon span {
+  color: orange;
+}
+.list-item-text h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.list-item-text h4 {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 576px) {
+  .song-list-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.list-item:hover {
+  /* background-color: var(--green); */
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+/* end of song list */
+/* songs owl */
+.songs {
+  padding: 40px 0;
+}
+.songs h1 {
+  text-transform: uppercase;
+  margin: 0 0 20px 20px;
+}
+.songs {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.song h3 {
+  text-transform: capitalize;
+}
+.song h4 {
+  margin: 10px 0;
+  text-transform: capitalize;
+  color: var(--candy);
+}
+.song-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.song img {
+  height: 250px;
+  display: block;
+  width: 100% !important;
+  transition: all 2s ease;
+}
+.song img:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+.song-icon {
+  font-size: 30px;
+  padding: 10px;
+  display: inline-block;
+  color: var(--candy);
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 2s ease;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.song-icon:hover {
+  color: var(--white1);
+  border-color: #222;
+  background-color: var(--candy);
+}
+.song-container:hover .song-icon {
+  opacity: 1;
+}
+/* end of song owl */
+/* end of main */
